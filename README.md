@@ -10,11 +10,11 @@ You can follow the instructions in any of the exercises published in internet
 
 ## Rules
 
-TO BE DEFINED
+The only rule is to not modify the interface present in the code MarsRoverApi.
 
 ## Simple diagram of the skeleton
 
-![TO BE DEFINED](TO_BE_DEFINED.jpg)
+![diagram](diagram.jpg)
 
 ### Disclaimer
 
