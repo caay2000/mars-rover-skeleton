@@ -1,6 +1,6 @@
 package mars.rover.domain
 
-data class Rover(var x: Int, var y: Int, var direction: Direction) {
+data class Rover(var position: Position, var direction: Direction) {
 
     fun move(order: Command.MovementOrder) {
         when(order){
@@ -8,8 +8,5 @@ data class Rover(var x: Int, var y: Int, var direction: Direction) {
             Command.MovementOrder.TURN_RIGHT -> TODO()
             Command.MovementOrder.TURN_LEFT -> TODO()
         }
-
-
     }
-
 }
