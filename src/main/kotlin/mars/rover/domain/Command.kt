@@ -3,7 +3,7 @@ package mars.rover.domain
 sealed class Command {
 
     data class CreatePlateauCommand(val width: Int, val height: Int) : Command()
-    data class PlaceMarsRoverCommand(val position: Position, val direction: Direction) : Command()
+    data class PlaceMarsRoverCommand(val position: Position) : Command()
     data class MoveMarsRoverCommand(val order: MovementOrder) : Command()
 
     enum class MovementOrder {

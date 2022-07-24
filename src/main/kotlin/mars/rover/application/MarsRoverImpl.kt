@@ -2,9 +2,7 @@ package mars.rover.application
 
 import mars.rover.domain.Command
 import mars.rover.domain.CommandResponse
-import mars.rover.domain.Direction
 import mars.rover.domain.Plateau
-import mars.rover.domain.Position
 import mars.rover.domain.Rover
 
 class MarsRoverImpl : MarsRoverApi {
@@ -23,13 +21,13 @@ class MarsRoverImpl : MarsRoverApi {
     }
 
     private fun placeMarsRover(command: Command.PlaceMarsRoverCommand): CommandResponse {
-        map!!.rover = Rover(command.position, command.direction)
+        map!!.rover = Rover(command.position)
         return CommandResponse.EmptyResponse
     }
 
     private fun moveMarsRover(command: Command.MoveMarsRoverCommand): CommandResponse {
         map!!.rover!!.move(command.order)
-        return CommandResponse.PositionResponse(Position(0, 0), Direction.NORTH)
+        return CommandResponse.PositionResponse(map!!.rover!!.position)
     }
 
 }
