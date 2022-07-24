@@ -5,7 +5,7 @@ import mars.rover.domain.CommandResponse
 import mars.rover.domain.Plateau
 import mars.rover.domain.Rover
 
-class MarsRoverImpl : MarsRoverApi {
+class MarsRoverService : MarsRoverApi {
 
     private var map: Plateau? = null
 
